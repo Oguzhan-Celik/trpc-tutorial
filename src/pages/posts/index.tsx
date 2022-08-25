@@ -10,6 +10,10 @@ function PostListingPage() {
 
   return (
     <div>
+      <div className="bottomBtn">
+        <Link href="/posts/new">Create post</Link>
+      </div>
+
       {data?.map((post) => {
         return (
           <article key={post.id}>

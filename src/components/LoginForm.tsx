@@ -55,7 +55,7 @@ function LoginForm() {
           placeholder="jane.doe@example.com"
           {...register("email")}
         />
-        <button>Login</button>
+        <button className="loginBtn">Login</button>
       </form>
 
       <Link href="/register">Register</Link>

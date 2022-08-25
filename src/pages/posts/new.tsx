@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import { CreatePostInput } from "../../schema/post.schema";
@@ -17,17 +18,26 @@ function CreatePostPage() {
     mutate(values);
   }
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      {error && error.message}
+    <div>
+      <div className="bottomBtn">
+        <Link href="/posts">Read posts</Link>
+      </div>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        {error && error.message}
 
-      <h1>Create posts</h1>
+        <h1>Create posts</h1>
 
-      <input type="text" placeholder="Your post title" {...register("title")} />
-      <br />
-      <textarea placeholder="Your post title" {...register("body")} />
-      <br />
-      <button>Create post</button>
-    </form>
+        <input
+          type="text"
+          placeholder="Your post title"
+          {...register("title")}
+        />
+        <br />
+        <textarea placeholder="Your post title" {...register("body")} />
+        <br />
+        <button>Create post</button>
+      </form>
+    </div>
   );
 }
 

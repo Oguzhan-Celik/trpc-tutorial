@@ -30,7 +30,9 @@ function RegisterPage() {
         />
         <br />
         <input type="text" placeholder="Tom" {...register("name")} />
-        <button type="submit">Register</button>
+        <button className="loginBtn" type="submit">
+          Register
+        </button>
       </form>
 
       <Link href="/login">Login</Link>
